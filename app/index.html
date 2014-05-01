@@ -1,14 +1,19 @@
-<!DOCTYPE html>
+<!-- index.html -->
+<doctype html>
 <html>
   <head>
-      <title>2048</title>
-      <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <title>2048</title>
+    <link rel="stylesheet" href="styles/main.css">
   </head>
   <body ng-app="twentyfourtyeightApp">
-      <!-- header -->
-      <div class="container" ng-include="'views/main.html'"></div>
-      <!-- script tags -->
-      <script type="text/javascript" src="bower_components/angular/angular.js"></script>  
-      <script type="text/javascript" src="scripts/app.js"></script>
+    <!-- header -->
+    <div class="container" ng-include="'views/main.html'"></div>
+
+    <div id="game-container">
+      <div grid ng-model='ctrl.game' class="row"></div>
+    </div>
+    <!-- script tags -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="scripts/app.js"></script>
   </body>
 </html>
